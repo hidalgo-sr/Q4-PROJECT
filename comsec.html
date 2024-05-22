@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<title>Comments Section</title>
+		<style>
+			body {
+				background-color: #F5F5F5;
+		        font-optical-sizing: auto;
+		        font-style: normal;
+		        font-family: 'Outfit', sans-serif;
+			}
+
+			.navbar {
+				background-color: #FFFFFF;
+		        padding: 15px;
+		        box-shadow: 0 30px 40px rgba(204,199,179,255);
+		        border: 2px solid white;
+			}
+
+			.container {
+				background-color: #FFFFFF;
+		        width: 850px;
+		        padding: 15px;
+		        box-shadow: 0 30px 40px rgba(204,199,179,255);
+		        border: 2px solid white;
+		        align-text: center;
+		        border-radius: 20px;
+			}
+
+			img {
+				margin-right: 13px;
+			}
+
+			.image {
+				margin-bottom: 30px;
+			}
+
+			form {
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm">
+			<div class="container-fluid">
+				<a href="index.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYaaMgVKWInUVELbTg-_UjcJWbjlgznP4Y1JfJII3z0weO5I8m" class="rounded-circle" width=70px height=70px> </a>
+				<ul class="navbar-nav nav-tabs me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="mainpage.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://hidalgo-sr.github.io/Q1-PROJECT/">First Quarter Project</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://hidalgo-sr.github.io/Q2-PROJECT/">Second Quarter Project</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://hidalgo-sr.github.io/Q3-PROJECT/">Third Quarter Project</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="comsec.html">Comments Section</a>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="text" placeholder="Search">
+					<button class="btn btn-light" type="button">Search</button>
+				</form>
+			</div>
+		</nav> 
+		<br>
+		<br>
+		<br>
+		<div class="container mt-1">
+			<div class="whats-next">
+				<h2> What's Next? </h2>
+				<p> As a student of ICT, I'm excited to learn Python in ICT next year. It seems like a great way to build a strong foundation in programming and problem-solving through hands-on projects. Plus, Python's potential for creative expression and advanced fields like machine learning is fascinating. Overall, I'm eager to use Python to achieve my programming goals and explore new opportunities in the digital world. </p>
+			</div>
+		</div>
+		<br>
+		<div class="container mt-1">
+			<form id="commentSection">
+				<h2>Comment Section</h2>
+				<div class="row username mb-3">
+					<label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+					<div class="col-sm-10"> <input id="userName" type="text" name="fname" placeholder="Enter your username"></div>
+				</div>
+				<div class="row email mb-3">
+					<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+					<div class="col-sm-10"> <input id="userEmail" type="text" name="email" placeholder="Enter your email"></div>
+				</div>
+				<textarea id="userComment" rows="3" cols="100" name="comment" placeholder="Type your comment here"></textarea>
+				<input type="button" onclick="myFunction()" value="Submit">
+			</form>
+			<h3>Comments</h3>
+			<p id="data"></p>
+			<script>
+				function myFunction(){
+				let data = "";  let name = document.getElementById("userName").value
+				let email = document.getElementById("userEmail").value
+				let comment = document.getElementById("userComment").value
+				data = "User name : "+name+"<br/>User email : "+email+ "<br/>User comment : "+comment
+				document.getElementById("data").innerHTML = data
+				}
+			</script>
+		</div>
+	</body>
+</html>
